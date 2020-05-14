@@ -25,6 +25,7 @@ app.get("/", async (req, res) => {
         // Se não existir, retorna vazio (feito desta forma para ficar visualmente mais fácil a validação)
         if(!reply) {
             console.log('api');
+            await getApiData()
             return res.json('');
         }
         //Caso exista, retorna o valor da chave Ricks
